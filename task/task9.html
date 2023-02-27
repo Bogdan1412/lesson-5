@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<h2>Задача 9. Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).</h2>
+		<script>
+			const userNumber = parseInt(prompt('Enter number fron 1-10'))
+			let result
+			let compRandomNumber
+			for (let i = 0; i < +Infinity; i++) {
+				compRandomNumber = 1 + Math.floor(Math.random() * 10)
+				result = window.confirm(`It is yours number? ${compRandomNumber}`)
+				if (userNumber === compRandomNumber && result == true) {
+					result = alert(`I got the number ${userNumber}`)
+				  break
+				}
+			}
+			document.write(`User number ${userNumber} <br> Computer number ${compRandomNumber}`)
+		</script>
+	</body>
+</html>

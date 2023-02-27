@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<h2>Задача 7. Вивести на екран N абзаців (N вводиться користувачем) за зразком:</h2>
+		<script>
+			let userParagraf = parseInt(prompt('Enter number paragraf'))
+			for (let i = 0;i < userParagraf;i++) {
+				document.write(`<h1>Title ${i + 1}</h1>`)
+				for (let j = 0;j <= i;j++) {
+					document.write(`<p>Section ${i +1},Paragraf ${j + 1}</p><hr>`)
+				}
+			}
+	</script>
+	</body>
+</html>

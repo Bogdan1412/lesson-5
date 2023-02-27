@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<h2>Задача 8. Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).</h2>
+		<script>
+			const userNumber = parseInt(prompt('Enter yours number fron 1-10'))
+			let compNumber
+			let result
+			for (let i = 0; i < 3; i++) {
+				compRandomNumber = 1 + Math.floor(Math.random() * 10)
+				result = confirm(`It is yours number ${compRandomNumber}`)
+				if (userNumber === compRandomNumber && result == true) {
+					result = alert(`I won`)
+					break 
+				} else {
+					result = alert(`I loost ${userNumber}`)
+				}
+			}
+			result = document.write(`User number = ${userNumber} <br> Computer number = ${compRandomNumber}`)
+		</script>
+	</body>
+</html>

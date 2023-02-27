@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/style.css">
+		<title>Document</title>
+	</head>
+	<body>
+		<h2>Задача 12. Ігровий автомат.</h2>
+		<script>
+			const apple = 1
+			const plum = 2
+			const pear = 3
+			const waterlemon = 4
+			let result = 0 
+			let appleCount = 0
+			let plumCount = 0
+			let pearCount = 0
+			let waterlemonCount = 0
+			
+			for (let i = 0; i < 3; i++) {
+				const randomImagesNum = 1 + Math.floor(Math.random() * (4-1+1))
+				document.write(`<img src="/lesson-6/img/img-${randomImagesNum}.png" alt="">`)
+				switch (randomImagesNum) {
+					case 1: result = `apple`
+						appleCount++
+						break;
+					case 2: result = `plum`
+						plumCount++
+						break;
+					case 3: result = `pear`
+						pearCount++
+						break;
+					case 4: result = `waterlemon`
+						waterlemonCount++
+						break;
+				}
+				if (appleCount === 3) {
+					document.write(`${result} 100$`);
+					break
+				} else if (plumCount === 3) {
+					document.write(`${result} 200$`);
+					break
+				} else if (pearCount === 3) {
+					document.write(`${result} 500$`);
+					break
+				} else if (waterlemonCount === 3) {
+					document.write(`${result} 1000$`);
+				}
+			}
+		</script>
+	</body>
+</html>
